@@ -42,12 +42,25 @@ nav {
 }
 
 .nav-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    color: #ff3399;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 5 px;
+    transition: all 0.3s ease-in-out;
 }
 
 .hero {
     text-align: center;
     padding: 5rem 2rem;
+    margin-top: 3rem;
+    border-top: 2px solid #ff3399;
+}
+
+header {
+background-color: #1a1a1a;
+padding: 1.5rem 2rem;
+border-bottom: 2px solid #ff3399;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .hero h2 {
@@ -63,8 +76,11 @@ nav {
 main {
     max-width: 900px;
     margin: 4rem auto;
-    padding: 0 2rem;
-    line-height: 1.0;
+    padding: 4rem 2rem;
+    background-color: #0a0a0a;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+    border-top: 2px solid #ff3399;
+    line-height: 1.5;
 }
 
 main h2{
