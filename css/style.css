@@ -5,26 +5,31 @@ body {
     color: #fff;
 }
 
+header {
+    background-color: #111;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 10 px rgba(0, 0, 0, 0.5);
+}
+
 nav {
     display:flex;
     justify-content: space-between;
     padding: 1rem 2rem;
-    background-color: #111
+    background-color: #111;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: #ff0066;
     font-weight: bold;
+    text-shadow: 1px 1px 8px rgba(255, 0, 102, 0.5);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 1.5rem
-    padding: 0;
-    margin: 0;
+    gap: 2rem;
+    align-items: center;
 }
 
 .nav-links a {
@@ -37,7 +42,7 @@ nav {
 }
 
 .nav-links a:hover {
-    background-color: rgbaa(255, 255, 255, 0.2)
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .hero {
@@ -53,4 +58,23 @@ nav {
 .hero p {
     font-size: 1.2rem;
     margin-top: 1rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    line-height: 1.0;
+}
+
+main h2{
+    color: #ff3399
+    text-shadow: 1px 1px 6px rgba(255, 51, 153, 0.3);
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+main p {
+    color: #ddd;
+    font-size: 1.1rem;
 }
