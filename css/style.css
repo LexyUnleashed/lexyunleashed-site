@@ -75,7 +75,6 @@ main {
     padding: 4rem 2rem;
     background-color: #0a0a0a;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
-    border-top: 2px solid #ff3399;
     line-height: 1.5;
 }
 
@@ -95,9 +94,44 @@ main {
     padding: 2rem;
     background-color: #fdfbfb;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-top: 2px dashed #ff3399;
-    margin-top: 2rem;
+    border-top: 3px solid #00ccff;
+    border-bottom: 3px solid #ff3399;
+    background-color: #111;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 1;
+    animation: glitchShift 2.2s infinite ease-in-out;
+    box-shadow:
+    inset 0 0 12px rgba(255, 51, 153, 0.2), /*subtle inner pink glow*/
+    inset 0 0 8px rgba(0, 204, 255, 0.15), /*subtle inner blue glow*/
+    0 0 10px rgba(255, 51, 153, 0.4); /* outer halo */
+}
+
+.blog-posts h3,
+.blog-posts p,
+.blog-posts.date {
+    text-shadow: 0 0 2px #fff, 0 0 5px #ff3399;
+}
+
+@keyframes glowShift {
+    0% {
+        box-shadow: 
+        inset 0 0 12px rgba(255, 51, 153, 0.2),
+        inset 0 0 8px rgba(0, 204, 255, 0.15),
+        0 0 10px rgba(255, 51, 153, 0.4);
+    }
+     33% {
+        box-shadow: 
+        inset 0 0 16px rgba(0, 204, 255, 0.25),
+        inset 0 0 10px rgba(255, 51, 153, 0.2),
+        0 0 15px rgba(0, 204, 255, 0.5);
+    }    
+     66% {
+        box-shadow: 
+        inset 0 0 14px rgba(255, 51, 153,0.25),
+        inset 0 0 12px rgba(0, 204, 255, 0.2),
+        0 0 12px rgba(255, 51, 153, 0.6);
+    }
 }
 
 .blog-posts .post {
@@ -113,6 +147,7 @@ main {
 .blog-posts .post:hover {
     transform: translateY(-4px);
     box-shadow: 0 6px 12px rgba(255, 51, 153, 0.4);
+    filter: brightness(1.1) contrast(1.2;)
 }
 
 .blog-posts h3 {
@@ -165,11 +200,25 @@ main {
     display: block;
 }
 
+.post-divider {
+    border: none;
+    height: 2px;
+    background-imge: repeating-linear-gradient(
+        to right,
+        #ff3399,
+        #ff3399 2px,
+        transparent 2px,
+        transparent: 4px
+    );
+    opacity: 0.8;
+    margin: 2rem 0;
+}
+
 .post-nav {
     margin-top: 3rem;
     padding: 2rem;
     text-align: center;
-    transition: t
+    transition: all 0.3s ease;
 }
 
 .post-nav a {
@@ -198,11 +247,41 @@ main {
     transition: text-decoration 0.3s ease;
 }
 
+.post-content {
+    padding: 2rem;
+    background-color: #111;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin: 3rem auto;
+    max-width: 900px;
+    line-height: 1.7;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3 {
+    color: #ff3399;
+    margin-top: 2rem;
+}
+
+.post-content .date {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.post-content hr {
+    border: none;
+    border-top: 1px dashed #ff3399;
+    margin: 2.5rem 0;
+}
 .post-nav a:hover::after {
     transform: scaleX(1);
 }
 
-.teat::after {
+.text::after {
     content: "";
     display: block;
     width: 50px;
