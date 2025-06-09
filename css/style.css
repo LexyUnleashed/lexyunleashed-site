@@ -579,8 +579,7 @@ main p {
     pointer-events: none;
     background-image: url('https://media.giphy.com/media/l3q2W5sFX5zB2zbhe/giphy.gif');
     background-size: cover;
-    opacity: 0.15;s
+    opacity: 0.15;
     z-index: 9999;
 }
-
 
