@@ -12,6 +12,11 @@ body {
     color: #fff;
 }
 
+:root {
+    --pink-glow: #ff4ecb;
+    --sky-blue: #4ecbff;
+}
+
 header {
     background-color: #1a1a1a;
     padding: 1.5rem 2rem;
@@ -310,38 +315,73 @@ main {
     background: rgba(0, 0, 0, 0.7);
 }
 
+.about-content {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    color: #ffffff;
+    font-family: 'Lexend', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    box-shadow: 0 0 15px #ff4ecb40;
+    text-align: left;
+}
+
+.about-content::before {
+    content: "✨";
+    font-size: 1.2rem;
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    color: #ff4ecb;
+}
+
 .about-content h1.glow-header {
-    font-size: 3rem;
+    font-size: 2.5rem;
     text-align: center;
     color: var(--pink-glow);
-    text-shadow: 0 0 10px var(--pink-glow);
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 10px #ff4ecb80;
 }
 
 .about-content h2 {
     margin-top: 2rem;
-    font-size: 2rem;
-    color: #fff;
+    font-size: 1.75rem;
+    color: #ff4ecb;
+    margin-bottom: 0.75rem;
     border-bottom: 2px dashed va(--pink-glow);
     padding-bottom: 0.5rem;
+    text-shadow: 0 0 5px #ff4ecb33;
 }
 
-.about-content p{
+.about-content p {
     font-size: 1.1rem;
     color: #e0e0e0;
     line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .divider {
     margin: 2rem 0;
     border: none;
+    border-top: 1px solid #ff4ecb40;
     height: 2px;
     background: linear-gradient(to right, transparent, var(--pink-glow), transparent);
     opacity: 0.6;
 }
 
 .about-link {
-    color: car(--sky-blue);
-    text-decoration: underline;
+    color: var(--sky-blue);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.about-link:hover {
+    border-bottom: 1px solid var(--sky-blue);
+    color: #ffffff;
 }
 
 /* === About Page Styles End == */
@@ -482,6 +522,8 @@ main p {
     font-size: 1.1rem;
 }
 
+/* === Mobile: max 780px === */
+
 @media (max-width: 768px) {
 
     nav {
@@ -568,6 +610,23 @@ main p {
         transition: all 0.3s ease;
     }
 }
+
+/* === Mobile: max 600px === */
+
+@media (max-width: 600px) {
+    .about-content h1.glow-header {
+        font-size: 2rem;
+    }
+
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+}
+
 
 /* Sparkle overlay effect */
 .sparkle {
